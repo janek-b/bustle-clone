@@ -1,0 +1,8 @@
+.media-body h4,
+.media-body p {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}

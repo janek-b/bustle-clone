@@ -1,0 +1,11 @@
+{{#admin-test}}
+  {{#bs-button class="pull-right" type="danger" onClick=(action "deleteStory" model)}}Delete Story{{/bs-button}}
+  {{story-edit story=model updateStory="updateStory"}}
+{{/admin-test}}
+<hr>
+<h2 class="text-center text-capitalize">{{model.title}}</h2>
+<img class="center-block" src={{model.img}} alt={{model.title}} />
+<br>
+<p>By <strong class="text-uppercase">{{model.author}}</strong></p>
+<br>
+<p>{{model.text}}</p>

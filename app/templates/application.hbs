@@ -1,5 +1,24 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#bs-navbar type=(if inverse 'inverse') fluid=fluid as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}Brand{{/link-to}}
+  </div>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}{{#nav.link-to "index"}}Home{{/nav.link-to}}{{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 ">
+      <div class="page-header">
+        <h1 class="text-center">Bustle <small>clone</small></h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>

@@ -1,0 +1,13 @@
+<li class="media">
+  {{#link-to 'story' story.id}}
+  <div class="well">
+    <div class="media-left media-middle">
+      <img src={{story.img}} alt={{story.title}} />
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading text-center">{{story.title}}</h4>
+      <p>{{story.text}}</p>
+    </div>
+  </div>
+  {{/link-to}}
+</li>

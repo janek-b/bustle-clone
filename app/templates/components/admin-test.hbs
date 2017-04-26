@@ -1,0 +1,5 @@
+{{#if admin.isAdmin}}
+  {{yield}}
+{{else}}
+  {{#bs-button type="primary" onClick=(action "makeAdmin")}}Make Admin{{/bs-button}}
+{{/if}}

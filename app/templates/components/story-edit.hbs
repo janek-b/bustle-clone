@@ -1,0 +1,31 @@
+{{#bs-button active=notCollapsed onClick=(action "toggle")}}
+  {{#if collapsed}}
+    Edit Story
+  {{else}}
+    Hide
+  {{/if}}
+{{/bs-button}}
+
+{{#bs-collapse collapsed=collapsed}}
+  <div class="well">
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=title id="title" class="form-control" placeholder=story.title}}
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author" class="form-control" placeholder=story.author}}
+      </div>
+      <div class="form-group">
+        <label for="img">Image</label>
+        {{input value=img id="img" class="form-control" placeholder=story.img}}
+      </div>
+      <div class="form-group">
+        <label for="text">Content</label>
+        {{textarea value=text id="text" rows="6" class="form-control" placeholder=story.text}}
+      </div>
+      {{#bs-button type="success" onClick=(action "updateStory" story)}}Update{{/bs-button}}
+    </form>
+  </div>
+{{/bs-collapse}}

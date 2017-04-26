@@ -1,0 +1,15 @@
+{{outlet}}
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    {{#admin-test}}
+      {{new-story saveStory="saveStory"}}
+    {{/admin-test}}
+    <hr>
+    <ul class="media-list">
+      {{#each model as |story|}}
+        {{story-tile story=story}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
