@@ -1,5 +1,5 @@
 {{#if admin.isAdmin}}
-  {{#bs-button type="primary" onClick=(action "removeAdmin")}}Log out{{/bs-button}}
+  {{#bs-button type="primary navbar-btn" onClick=(action "removeAdmin")}}Admin Log out{{/bs-button}}
 {{else}}
   {{#bs-button type="primary navbar-btn" onClick=(action "makeAdmin")}}Admin Log in{{/bs-button}}
 {{/if}}
